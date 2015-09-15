@@ -1,5 +1,5 @@
 body {
-	background: #fff;
+	background: #f2f2f2;
 	color: #333;
 	font: 13px/1.5 Avenir, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
 }
@@ -14,4 +14,9 @@ body {
     color: #222;
     text-decoration: initial;
     background-color: #f2f2f2;
+}
+#filelist div {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
 }
