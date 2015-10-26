@@ -38,17 +38,17 @@ var uploader = new plupload.Uploader({
 
 		FilesAdded: function(up, files) {
 			plupload.each(files, function(file) {
-				document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+				document.getElementById('filelist').innerHTML += '<div class=file-item id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
 			});
 		},
 
 		UploadProgress: function(up, file) {
-			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>" + '<div class=loading-bg' + ' ' + 'style=width:' + file.percent +'% ></div>';
 		},
 
 		FileUploaded: function(up, file, info) {
 			var response = JSON.parse(info.response);
-			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML += '<br />' + ' http://hb-prd.b0.upaiyun.com' + response.url + '<br />' + '![' + file.name +']' + '(http://hb-prd.b0.upaiyun.com' + response.url + ')';
+			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML += '<textarea class=img_url >' + ' http://hb-prd.b0.upaiyun.com' + response.url + '</textarea><textarea class=img_md>' + '![' + file.name +']' + '(http://hb-prd.b0.upaiyun.com' + response.url + ')' + '</textarea>';
 		},
 
 		Error: function(up, err) {

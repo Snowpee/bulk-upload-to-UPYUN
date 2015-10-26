@@ -1,22 +1,40 @@
 body {
 	background: #f2f2f2;
 	color: #333;
-	font: 13px/1.5 Avenir, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+	font: 14px/1.5 Arial, 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
 }
 #container a {
-    display: inline-block;
+display: inline-block;
     width: 150px;
     height: 50px;
     line-height: 50px;
-    border: 1px solid #ddd;
     text-align: center;
     font-size: 16px;
-    color: #222;
+    color: #FFF;
     text-decoration: initial;
-    background-color: #f2f2f2;
+    background-color: #62B6D6;
+    border-radius: 2px;
+    margin-right: 10px;
 }
-#filelist div {
-    padding: 10px;
+#filelist .file-item {
+    padding: 15px 20px;
     background-color: #fff;
     margin-bottom: 10px;
+}
+
+.file-item .img_url, .file-item .img_md {
+    /*width: 0;
+    height: 0;
+        visibility: hidden;*/
+}
+.file-item{
+    position: relative;
+}
+.loading-bg {
+    background: #62B6D6;
+    height: 2px;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

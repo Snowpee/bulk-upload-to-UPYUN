@@ -4,6 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	<title>Bulk Upload to UPYUN</title>
 	<link rel="stylesheet" href="asset/main.css" />
+  <script type="text/javascript" src="http://upcdn.b0.upaiyun.com/libs/mootoolscore/mootools.core-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -24,4 +25,20 @@
 <script src="lib/plupload-2.1.2/js/plupload.full.min.js"></script>
 <script src="lib/md5.js"></script>
 <script src="asset/main.js"></script>
+<!-- 点击复制功能实现 -->
+<script type="text/javascript">
+  function copyUrl()
+  { 
+  var Url2 = $$(".img_md");
+  Url2.select(); // 选择对象
+  document.execCommand("Copy"); // 执行浏览器复制命令
+  alert("已复制好，可贴粘。");
+  }
+
+  var fList = $$('.file-item');  
+  for (var i = 0; i < fList.length; i++) { //遍历所有此类标签
+      alert(fList.length);
+      //fList[i].onclick=copyUrl();//指定给它关闭 tab_picker 类函数
+  } 
+</script>
 </html>

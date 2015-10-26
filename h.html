@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<title>COPY</title>
+</head>
+<body>
+	<script type="text/javascript">
+	 function copyUrl()
+	 {
+	 var Url2=document.getElementById("url_001");
+	 Url2.select(); // 选择对象
+	 document.execCommand("Copy"); // 执行浏览器复制命令
+	 alert("已复制好，可贴粘。");
+	 }
+	 </script>
+	 <textarea id="url_001">用户定义的代码区域</textarea>
+	 <input type="button" onClick="copyUrl()" value="点击复制代码" />
+</body>
+</html>
