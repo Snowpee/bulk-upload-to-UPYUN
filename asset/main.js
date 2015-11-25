@@ -51,7 +51,7 @@ var uploader = new plupload.Uploader({
 
 		FileUploaded: function(up, file, info) {
 			var response = JSON.parse(info.response);
-			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML += '<textarea class=img_url >' + ' http://hb-prd.b0.upaiyun.com' + response.url + '</textarea><textarea class=img_md>' + '![' + file.name +']' + '(http://hb-prd.b0.upaiyun.com' + response.url + ')' + '</textarea>';
+			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML += '<textarea class=img_url onfocus=this.select()>' + ' http://hb-prd.b0.upaiyun.com' + response.url + '</textarea><textarea class=img_md onfocus=this.select()>' + '![' + file.name +']' + '(http://hb-prd.b0.upaiyun.com' + response.url + ')' + '</textarea>';
 		},
 
 		Error: function(up, err) {
