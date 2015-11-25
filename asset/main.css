@@ -1,7 +1,28 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
 body {
 	background: #f2f2f2;
 	color: #333;
 	font: 14px/1.5 Arial, 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+}
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#wrapper .content {
+    padding: 30px 20px;
+    background: #fff;
+}
+.content h1 {
+    text-align: center;
+    font-weight: normal;
+}
+.content h3 {
+    margin: 20px 0;
 }
 #container a {
 display: inline-block;
@@ -16,25 +37,56 @@ display: inline-block;
     border-radius: 2px;
     margin-right: 10px;
 }
-#filelist .file-item {
-    padding: 15px 20px;
+#pickfiles {
+    height: 60px;
+    line-height: 60px;
+    color: #444;
+    text-decoration: none;
+    text-align: center;
+    display: block;
     background-color: #fff;
     margin-bottom: 10px;
+    border: 1px dashed #ddd;
+}
+#pickfiles:hover {
+    background: #f7f7f7;
+    border: 1px dashed #bbb;
+}
+#filelist .file-item {
+    height: 60px;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    border: 1px solid #ededed;
+    line-height: 60px;
+    position: relative;
 }
 
 .file-item .img_url, .file-item .img_md {
-    /*width: 0;
-    height: 0;
-        visibility: hidden;*/
+    border: 1px solid #ddd;
+    height: 40px;
+    margin-left: 10px;
 }
 .file-item{
     position: relative;
 }
+.file-item b {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
 .loading-bg {
-    background: #62B6D6;
-    height: 2px;
+    background: rgba(0,0,0,.3);
+    height: 60px;
     padding: 0;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.info, .info a {
+    font-size: 12px;
+    color: #999;
+    padding: 20px 0;
 }

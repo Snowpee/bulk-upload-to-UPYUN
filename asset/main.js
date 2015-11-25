@@ -38,12 +38,15 @@ var uploader = new plupload.Uploader({
 
 		FilesAdded: function(up, files) {
 			plupload.each(files, function(file) {
-				document.getElementById('filelist').innerHTML += '<div class=file-item id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+				document.getElementById('filelist').innerHTML += '<div class=file-item id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <i></i><b></b></div>';
 			});
 		},
 
+		
+
 		UploadProgress: function(up, file) {
-			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>" + '<div class=loading-bg' + ' ' + 'style=width:' + file.percent +'% ></div>';
+			var loading_pr = 100-file.percent;
+			document.getElementById(file.id).getElementsByTagName('i')[0].innerHTML = '<span>' + file.percent + "%</span>" + '<div class=loading-bg' + ' ' + 'style=width:' + loading_pr + '% ></div>';
 		},
 
 		FileUploaded: function(up, file, info) {
